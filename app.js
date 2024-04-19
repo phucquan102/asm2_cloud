@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var authRoute = require('./routes/auth');
+var userRoute = require('./routes/user');
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -29,6 +31,16 @@ app.use('/users', usersRouter);
 
 //ROUTES
 app.use("/v1/auth", authRoute);
+app.use("/v1/user", userRoute);
+
+
+
+//JSON WEB TOKEN
+
+
+
+
+
 
 
 // catch 404 and forward to error handler
